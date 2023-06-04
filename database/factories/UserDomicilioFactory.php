@@ -17,7 +17,12 @@ class UserDomicilioFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id' => fake()->unique()->numberBetween(1,100),
+            'domicilio' => fake()->streetAddress(),
+            'numero_exterior' => fake()->buildingNumber(),
+            'colonia' => fake()->streetName(),
+            'cp' => fake()->postCode(),
+            'ciudad' => fake()->city(),
         ];
     }
 }
