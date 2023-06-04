@@ -12,6 +12,6 @@ class UserDomicilioSeeder extends Seeder
      */
     public function run(): void
     {
-        \App\Models\UserDomicilio::factory(100)->create();
+        
     }
 }
